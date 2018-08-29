@@ -83,3 +83,16 @@ footer{
     font-size: 18px;
     margin: 10px 0;
 }
+
+.gatos .container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gatos .container div{
+    width: 30%;
+}
+
+.gatos .container div img{
+    width: 100%;
+}
