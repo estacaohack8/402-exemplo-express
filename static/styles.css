@@ -22,8 +22,64 @@ header nav{
 header nav a{
     text-decoration: none;
     margin: 0 10px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
 }
 
 header div{
     display: flex;
+}
+
+footer{
+    padding: 30px 10px;
+    background-color: #ff00d4;
+    color: white;
+}
+
+.home .banner {
+    position: relative;
+    font-family: 'Permanent Marker', sans-serif;
+}
+
+.home .banner img{
+    width: 100%;
+}
+
+.home .banner h2{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #ff00d4;
+    font-size: 60px;
+    width: 500px;
+    max-width: 100%;
+    line-height: 1.5;
+}
+
+.home form{
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.home form input, .home form textarea{
+    width: 100%;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.home form button{
+    border: 0;
+    border-radius: 50px;
+    background-color: #ff00d4;
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
 }

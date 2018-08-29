@@ -3,7 +3,22 @@
 <%- include('shared/head') %>
 <body>
     <%- include('shared/header') %>
-    <h1>Bem vindo ao Rent-a-Cat</h1>
+    <section class="home">
+        <div class="banner">
+            <h2>Bem vindo ao Rent-a-Cat</h2>
+            <img src="/static/banner.jpg" alt="">
+        </div>
+        
+        <form action="">
+            <h2>Entre em contato:</h2>
+            <input type="text" placeholder="nome">
+            <input type="text" placeholder="email">
+            <textarea rows="10" placeholder="mensagem"></textarea>
+            
+            <button>Enviar</button>
+        </form>
+    </section>
     
+    <%- include('shared/footer') %>
 </body>
 </html>
