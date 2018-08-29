@@ -17,20 +17,6 @@ app.get('/sobre', (req, res) => {
     res.render('sobre');
 });
 
-app.get('/styles.css', (req, res) => {
-    let cores = ['blue', 'red', 'yellow'];
-
-    let numero = Math.floor(Math.random() * 3);
-
-    let cor = cores[numero];
-    
-    res.send(`
-        body{
-            color: ${cor};
-        }
-    `);
-});
-
 app.listen(3000, () => {
     console.log('Servidor inicializado')
 });
