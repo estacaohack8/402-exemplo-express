@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff00d4;
+    color: white;
+}
+
+header img {
+    width: 100px;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+
+header nav a{
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header div{
+    display: flex;
+}
