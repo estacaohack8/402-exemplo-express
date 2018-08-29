@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "Pombas",
+        "img": "/static/gato-1.jpg"
+    },
+    {
+        "nome": "Pulguento",
+        "img": "/static/gato-2.jpg"
+    },
+    {
+        "nome": "Abóbora",
+        "img": "/static/gato-3.jpg"
+    },
+    {
+        "nome": "Assassino",
+        "img": "/static/gato-4.jpg"
+    },
+    {
+        "nome": "Soneca",
+        "img": "/static/gato-5.jpg"
+    }
+]

@@ -1,4 +1,5 @@
 const express = require('express');
+const gatos = require('./data/gatos.json');
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -9,7 +10,7 @@ app.get('', (req, res) => {
 });
 
 app.get('/gatos', (req, res) => {
-    res.render('gatos');
+    res.render('gatos', {'gatos': gatos});
 });
 
 app.get('/sobre', (req, res) => {

@@ -7,20 +7,12 @@
         <h2>Gatos para Locação</h2>
         
         <div class="container">
-            <div>
-                <img src="/static/gato-1.jpg" alt="">
-                <h3>Pombas</h3>
-            </div>
-            
-            <div>
-                <img src="/static/gato-1.jpg" alt="">
-                <h3>Pombas</h3>
-            </div>
-            
-            <div>
-                <img src="/static/gato-1.jpg" alt="">
-                <h3>Pombas</h3>
-            </div>
+            <% for(let gato of gatos){ %>
+                <div>
+                    <img src="<%= gato.img %>" alt="">
+                    <h3><%= gato.nome %></h3>
+                </div>
+            <% } %>
         </div>
         
     </section>
