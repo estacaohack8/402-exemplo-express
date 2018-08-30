@@ -21,6 +21,12 @@ app.post('', (req, res) => {
     });
 });
 
+app.get('/admin/mensagens', (req, res) => {
+    req.db.collection('mensagens').find().toArray((erro, dados) => {
+        res.render('admin-mensagens', {'mensagens': dados});
+    });
+});
+
 app.get('/gatos', (req, res) => {
     res.render('gatos', {'gatos': gatos});
 });
