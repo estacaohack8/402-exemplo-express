@@ -1,8 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const fs = require('fs');
 const expressMongoDb = require('express-mongo-db');
-const gatos = require('./data/gatos.json');
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -21,18 +19,37 @@ app.post('', (req, res) => {
     });
 });
 
+app.get('/gatos', (req, res) => {
+    req.db.collection('gatos').find().toArray((erro, dados) => {
+        res.render('gatos', {'gatos': dados});
+    });
+});
+
+app.get('/sobre', (req, res) => {
+    res.render('sobre');
+});
+
 app.get('/admin/mensagens', (req, res) => {
     req.db.collection('mensagens').find().toArray((erro, dados) => {
         res.render('admin-mensagens', {'mensagens': dados});
     });
 });
 
-app.get('/gatos', (req, res) => {
-    res.render('gatos', {'gatos': gatos});
+app.get('/admin/gatos', (req, res) => {
+    req.db.collection('gatos').find().toArray((erro, dados) => {
+        res.render('admin-gatos', {'gatos': dados});
+    });
 });
 
-app.get('/sobre', (req, res) => {
-    res.render('sobre');
+app.get('/admin/gatos/inserir', (req, res) => {
+    res.render('admin-gatos-inserir');
+});
+
+app.post('/admin/gatos/inserir', (req, res) => {
+    req.db.collection('gatos').insert(req.body, (erro) => {
+        console.log(erro);
+        res.render('admin-gatos-inserir');
+    });
 });
 
 app.listen(3000, () => {

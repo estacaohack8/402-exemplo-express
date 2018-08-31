@@ -30,6 +30,7 @@ header nav a{
 
 header div{
     display: flex;
+    align-items: center;
 }
 
 footer{
