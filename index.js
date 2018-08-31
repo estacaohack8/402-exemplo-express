@@ -7,7 +7,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use('/static', express.static('static'));
 app.use(bodyParser.urlencoded());
-app.use(expressMongoDb('mongodb://localhost/rent-a-cat'));
+app.use(expressMongoDb('mongodb://bpimentel:aviao11@ds239682.mlab.com:39682/rent-a-cat'));
 
 app.get('', (req, res) => {
     res.render('index');
@@ -62,6 +62,6 @@ app.post('/admin/gatos/:id', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Servidor inicializado')
 });
