@@ -11,6 +11,10 @@
             <div>
                 <p>Nome: <%= gato.nome%></p>
                 <img src="/static/<%= gato.img %>">
+
+                <form method="POST" action="/admin/gatos/<%= gato._id %>">
+                    <button>Deletar</button>
+                </form>
                 <hr>
             </div>
         <% } %>
