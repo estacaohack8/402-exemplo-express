@@ -10,7 +10,7 @@
         <% for(let gato of gatos){ %>
             <div>
                 <p>Nome: <%= gato.nome%></p>
-                <img src="/static/<%= gato.img %>">
+                <img src="<%= gato.img %>">
 
                 <form method="POST" action="/admin/gatos/<%= gato._id %>">
                     <button>Deletar</button>
